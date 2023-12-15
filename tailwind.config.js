@@ -15,6 +15,7 @@ module.exports = {
       colors: {
         "primary-color": "var(--primary-color)",
         "secondary-color": "var(--secondary-color)",
+        "last-color": "var(--last-color)",
       },
     },
   },
