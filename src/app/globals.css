@@ -15,6 +15,7 @@
 
 body {
   background: #cdc8b0;
+  cursor: url("/assets/icons/Cursor_UL.png") 10 10, auto;
 }
 p,
 span,

@@ -1,5 +1,7 @@
+"use client";
 import localFont from "next/font/local";
 import Link from "next/link";
+import { motion } from "framer-motion";
 const rodin = localFont({
   // src: "./utils/fonts/Rodin-Font/FOT-Rodin Pro DB.otf",
   src: "./utils/fonts/Rodin-Font/FOT-RodinPro-Bold.otf",
@@ -67,8 +69,10 @@ export default function Home() {
             </g>
           </svg>
         </Link>
-        <div className="h-px bg-black w-full mt-5 mb-10"></div>
-        <p>This website was inspired by the game Nier Automata</p>
+        <div className="h-px bg-black w-full mt-5 mb-5"></div>
+        <p className="font-bold text-xl">
+          This website was inspired by the game Nier Automata
+        </p>
       </div>
     </main>
   );
