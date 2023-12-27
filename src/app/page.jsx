@@ -32,7 +32,7 @@ export default function Home() {
           <span className="text-primary-color font-bold">SYSTEM</span>
         </div>
         <div className="bg-last-color  text-center p-10  font-bold border border-secondary-color">
-          <p className="leading-loose text-2xl">
+          <p className="leading-loose text-xl">
             Hi human, this site is the presentation of the portfolio of the
             human who is represented in the name of Kevin Armache, who is the
             author of the creation of this website in the following sections we
@@ -40,7 +40,7 @@ export default function Home() {
             is called web development which is an area related to the creation
             of websites and web applications through programming languages.
           </p>
-          <p className="leading-loose text-2xl">
+          <p className="leading-loose text-xl">
             you will also see finished projects that Kevin has already had to
             realize for the moment I let you discover the portfolio, good visit
             dear human.

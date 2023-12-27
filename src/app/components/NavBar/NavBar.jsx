@@ -225,7 +225,7 @@ export default function NavBar() {
       </div>
       <div className="flex items-center px-10 justify-end w-1/4">
         <div className="mx-2">
-          <button>
+          <button className="handle_pointer_icon">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="30"
@@ -240,7 +240,7 @@ export default function NavBar() {
           </button>
         </div>
         <div className="mx-2">
-          <button>
+          <button className="handle_pointer_icon">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="30"
@@ -311,7 +311,7 @@ export default function NavBar() {
           </button>
         </div>
         <div className="mx-2">
-          <button className=" text-3xl">EN</button>
+          <button className="handle_pointer_icon text-3xl">EN</button>
         </div>
       </div>
     </div>
