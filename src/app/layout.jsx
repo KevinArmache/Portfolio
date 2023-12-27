@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import NavBar from "./components/NavBar/NavBar";
+import SocialMedia from "./components/SocialMedia/SocialMedia";
 import Footer from "./components/Footer/Footer";
 import "./globals.css";
 
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
         <header>
           <NavBar />
         </header>
+        <SocialMedia />
         {children}
         <Footer />
       </body>

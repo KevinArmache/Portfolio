@@ -45,3 +45,12 @@ h6 {
   color: #4a473d;
   font-family: rodin;
 }
+
+.container-social-media {
+  /* border: solid 2px red; */
+  position: fixed;
+  top: 50%;
+  right: 1% !important;
+  -ms-transform: translateY(-50%) !important;
+  transform: translateY(-50%) !important;
+}
