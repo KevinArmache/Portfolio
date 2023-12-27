@@ -10,18 +10,20 @@ const rodin = localFont({
 export default function Home() {
   return (
     <main>
-      <h1
-        className={` ${rodin.className} mt-14 text-center text-5xl drop-shadow-2xl`}
-      >
-        Glory To Mankind
-      </h1>
-      <div className="text-center">
-        <h3 className={` ${rodin.className} text-center text-3xl `}>
-          Welcome{" "}
-          <span className="bg-secondary-color p-1 font-bold text-primary-color">
-            human
-          </span>
-        </h3>
+      <div className="w-fit mx-auto">
+        <h1
+          className={` ${rodin.className} mt-14 text-center text-6xl drop-shadow-2xl`}
+        >
+          Glory To Mankind
+        </h1>
+        <div className="text-center ">
+          <h3 className={` ${rodin.className} text-right  text-4xl `}>
+            Welcome{" "}
+            <span className="bg-secondary-color p-1 font-bold text-primary-color">
+              human
+            </span>
+          </h3>
+        </div>
       </div>
 
       <div className="mt-10 mx-auto w-1/2">
@@ -29,7 +31,7 @@ export default function Home() {
           <span className="bg-last-color mx-2  h-5 w-5"></span>
           <span className="text-primary-color font-bold">SYSTEM</span>
         </div>
-        <div className="bg-last-color p-2 text-center  font-bold border border-secondary-color">
+        <div className="bg-last-color  text-center p-10  font-bold border border-secondary-color">
           <p className="leading-loose text-2xl">
             Hi human, this site is the presentation of the portfolio of the
             human who is represented in the name of Kevin Armache, who is the
@@ -46,8 +48,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mx-auto text-center  w-2/3">
-        <Link href="">
+      <div className="mx-auto mb-10 text-center w-2/3">
+        <Link href="/home">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="80"
@@ -70,7 +72,7 @@ export default function Home() {
           </svg>
         </Link>
         <div className="h-px bg-black w-full mt-5 mb-5"></div>
-        <p className="font-bold text-xl">
+        <p className="font-bold text-xl ">
           This website was inspired by the game Nier Automata
         </p>
       </div>

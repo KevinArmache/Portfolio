@@ -15,12 +15,12 @@ export default function NavBar() {
     <div className="flex border-b-2 border-black">
       <div className=" w-3/4">
         <ul className="flex p-4 items-center">
-          {activePage === "/" ? (
+          {activePage === "/home" ? (
             <li>
               <div className="border mb-1 border-secondary-color"></div>
               <Link
                 className="flex justify-center items-center bg-secondary-color px-3 py-2"
-                href={"/"}
+                href={"/home"}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +45,7 @@ export default function NavBar() {
               <div className="border mb-1 border-transparent"></div>
               <Link
                 className="flex justify-center items-center px-3 py-2"
-                href={"/"}
+                href={"/home"}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
