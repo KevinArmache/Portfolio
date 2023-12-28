@@ -10,7 +10,7 @@ export default function SocialMedia() {
           width="50"
           height="50"
           viewBox="0 0 24 24"
-          className="bg-[#4E4B42] p-1"
+          className="bg-[#4E4B42] p-1 "
         >
           <g
             fill="none"
