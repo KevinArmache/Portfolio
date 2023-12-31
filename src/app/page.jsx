@@ -1,7 +1,6 @@
 "use client";
 import localFont from "next/font/local";
 import Link from "next/link";
-import { motion } from "framer-motion";
 const rodin = localFont({
   // src: "./utils/fonts/Rodin-Font/FOT-Rodin Pro DB.otf",
   src: "./utils/fonts/Rodin-Font/FOT-RodinPro-Bold.otf",
@@ -12,12 +11,14 @@ export default function Home() {
     <main>
       <div className="w-fit mx-auto">
         <h1
-          className={` ${rodin.className} mt-14 text-center text-6xl drop-shadow-2xl`}
+          className={` ${rodin.className} my-text-shadow  mt-14 text-center text-6xl drop-shadow-2xl`}
         >
           Glory To Mankind
         </h1>
         <div className="text-center ">
-          <h3 className={` ${rodin.className} text-right  text-4xl `}>
+          <h3
+            className={` ${rodin.className} text-right my-text-shadow text-4xl `}
+          >
             Welcome{" "}
             <span className="bg-secondary-color p-1 font-bold text-primary-color">
               human
@@ -26,7 +27,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mt-10 mx-auto w-1/2">
+      <div className="mt-10 mx-auto w-1/2 my-box-shadow ">
         <div className="bg-secondary-color flex items-center  p-1  mx-auto">
           <span className="bg-last-color mx-2  h-5 w-5"></span>
           <span className="text-primary-color font-bold">SYSTEM</span>
@@ -48,14 +49,14 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mx-auto mb-10 text-center w-2/3">
+      <div className="mx-auto mb-10  text-center w-2/3">
         <Link href="/home">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="80"
             height="80"
             viewBox="0 0 24 24"
-            className="mx-auto mt-10"
+            className="mx-auto mt-10 "
           >
             <g
               fill="none"

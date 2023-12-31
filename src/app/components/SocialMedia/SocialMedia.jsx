@@ -16,12 +16,12 @@ export default function SocialMedia() {
             fill="none"
             stroke="#cdc8b0"
             strokeLinecap="round"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
             strokeWidth="2"
           >
             <path
-              stroke-dasharray="66"
-              stroke-dashoffset="66"
+              strokeDasharray="66"
+              strokeDashoffset="66"
               d="M12 3H8C5.23858 3 3 5.23858 3 8V16C3 18.7614 5.23858 21 8 21H16C18.7614 21 21 18.7614 21 16V8C21 5.23858 18.7614 3 16 3z"
             >
               <animate
@@ -32,8 +32,8 @@ export default function SocialMedia() {
               />
             </path>
             <path
-              stroke-dasharray="26"
-              stroke-dashoffset="26"
+              strokeDasharray="26"
+              strokeDashoffset="26"
               d="M12 8C14.20914 8 16 9.79086 16 12C16 14.20914 14.20914 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8"
             >
               <animate
@@ -45,7 +45,7 @@ export default function SocialMedia() {
               />
             </path>
           </g>
-          <circle cx="17" cy="7" r="1.5" fill="#cdc8b0" fill-opacity="0">
+          <circle cx="17" cy="7" r="1.5" fill="#cdc8b0" fillOpacity="0">
             <animate
               fill="freeze"
               attributeName="fill-opacity"
@@ -57,10 +57,7 @@ export default function SocialMedia() {
         </svg>
       </Link>
       <br />
-      <Link
-        className=""
-        href="https://www.facebook.com/asf.luthier/?_rdc=2&_rdr"
-      >
+      <Link className="" href="https://github.com/KevinArmache">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="50"
@@ -129,7 +126,7 @@ export default function SocialMedia() {
       </Link>
       <div className="icon-hidden">
         <br />
-        <Link href="mailto:kevinarmache@gmail.com">
+        <Link href="https://www.linkedin.com/in/kevin-armache-313733aa/">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="50"
@@ -137,7 +134,7 @@ export default function SocialMedia() {
             viewBox="0 0 24 24"
             className="bg-[#4E4B42] p-1"
           >
-            <circle cx="4" cy="4" r="2" fill="#cdc8b0" fill-opacity="0">
+            <circle cx="4" cy="4" r="2" fill="#cdc8b0" fillOpacity="0">
               <animate
                 fill="freeze"
                 attributeName="fill-opacity"
@@ -186,7 +183,7 @@ export default function SocialMedia() {
           </svg>
         </Link>
         <br />
-        <Link href="tel:+33785392044">
+        <Link href="mailto:kevinarmache@gmail.com">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="50"
