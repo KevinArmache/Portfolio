@@ -35,30 +35,30 @@ export default function page() {
         </div>
         <div className="text-center w-3/5 mx-auto  m-10 flex">
           <Link
-            href=""
-            className=" bg-secondary-color text-primary-color font-bold text-xl block p-5 w-1/2"
+            href="/project"
+            className=" bg-secondary-color my-text-shadow text-primary-color font-bold text-xl block p-5 w-1/2"
           >
             Check some project ?
           </Link>
           <Link
             href={""}
-            className="border-2 transition duration-300 hover:bg-secondary-color  hover:text-primary-color text-secondary-color font-bold text-xl block p-5 border-secondary-color w-1/2"
+            className="border-2 transition my-text-shadow duration-300 hover:bg-secondary-color  hover:text-primary-color text-secondary-color font-bold text-xl block p-5 border-secondary-color w-1/2"
           >
             Let's talk !
           </Link>
         </div>
       </div>
-      <p className="absolute -rotate-90 text-xl left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      <p className="absolute -rotate-90 text-2xl left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
         "I never quite realized... how beautiful this world is."
       </p>
-      <div className="w-1/2 ">
+      <div className="w-1/2">
         <div className="group border-4 relative border-secondary-color  mt-20 w-3/4 mx-auto  p-10">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="320"
             height="512"
             viewBox="0 0 320 512"
-            className="mx-auto"
+            className="mx-auto "
           >
             <path
               fill="#4a473d"
