@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function SocialMedia() {
   return (
-    <div className="py-5  absolute container-social-media ">
+    <div className="py-5  absolute container-social-media z-50 ">
       <Link href="https://www.instagram.com/kevinarmache/">
         <svg
           xmlns="http://www.w3.org/2000/svg"
