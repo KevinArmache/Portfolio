@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function SocialMedia() {
   return (
     <div className="py-5  absolute container-social-media z-50 ">
-      <Link href="https://www.instagram.com/kevinarmache/">
+      <Link target="_blank" href="https://www.instagram.com/kevinarmache/">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="50"
@@ -57,7 +57,7 @@ export default function SocialMedia() {
         </svg>
       </Link>
       <br />
-      <Link className="" href="https://github.com/KevinArmache">
+      <Link target="_blank" href="https://github.com/KevinArmache">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="50"
@@ -126,7 +126,10 @@ export default function SocialMedia() {
       </Link>
       <div className="icon-hidden">
         <br />
-        <Link href="https://www.linkedin.com/in/kevin-armache-313733aa/">
+        <Link
+          target="_blank"
+          href="https://www.linkedin.com/in/kevin-armache-313733aa/"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="50"
@@ -183,7 +186,7 @@ export default function SocialMedia() {
           </svg>
         </Link>
         <br />
-        <Link href="mailto:kevinarmache@gmail.com">
+        <Link target="_blank" href="mailto:kevinarmache@gmail.com">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="50"
