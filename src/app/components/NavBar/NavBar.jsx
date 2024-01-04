@@ -1,4 +1,5 @@
 "use client";
+import gsap from "gsap";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
@@ -6,6 +7,21 @@ import { usePathname } from "next/navigation";
 export default function NavBar() {
   const [activePage, setActivePage] = useState("");
   const pathname = usePathname();
+  useEffect(() => {
+    gsap.fromTo(
+      ".nav-bar-item",
+      {
+        opacity: 0,
+        y: -30,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        stagger: 0.5,
+      }
+    );
+  }, []);
 
   useEffect(() => {
     // Mettre à jour l'état activePage en fonction de l'URL actuelle
@@ -16,10 +32,10 @@ export default function NavBar() {
       <div className=" w-3/4">
         <ul className="flex p-4 items-center">
           {activePage === "/home" ? (
-            <li>
+            <li className="nav-bar-item">
               <div className="border mb-1 border-secondary-color"></div>
               <Link
-                className="flex justify-center items-center bg-secondary-color px-3 py-2"
+                className="flex justify-center items-center bg-secondary-color px-3 py-2 "
                 href={"/home"}
               >
                 <svg
@@ -41,10 +57,10 @@ export default function NavBar() {
               <div className="border mt-1 border-secondary-color"></div>
             </li>
           ) : (
-            <li>
+            <li className="nav-bar-item">
               <div className="border mb-1 border-transparent"></div>
               <Link
-                className="flex justify-center items-center px-3 py-2"
+                className="flex justify-center items-center px-3 py-2 "
                 href={"/home"}
               >
                 <svg
@@ -70,7 +86,7 @@ export default function NavBar() {
           )}
           {/* PROJECT */}
           {activePage === "/project" ? (
-            <li>
+            <li className="nav-bar-item">
               <div className="border mb-1 border-secondary-color"></div>
               <Link
                 className="flex justify-center items-center bg-secondary-color px-3 py-2"
@@ -96,7 +112,7 @@ export default function NavBar() {
               <div className="border mt-1 border-secondary-color"></div>
             </li>
           ) : (
-            <li>
+            <li className="nav-bar-item">
               <Link
                 href={"/project"}
                 className=" flex justify-center items-center  px-3 "
@@ -124,7 +140,7 @@ export default function NavBar() {
           )}
           {/* ABOUT */}
           {activePage === "/about" ? (
-            <li>
+            <li className="nav-bar-item">
               <div className="border mb-1 border-secondary-color"></div>
               <Link
                 className="flex justify-center items-center bg-secondary-color px-3 py-2"
@@ -150,7 +166,7 @@ export default function NavBar() {
               <div className="border mt-1 border-secondary-color"></div>
             </li>
           ) : (
-            <li>
+            <li className="nav-bar-item">
               <Link
                 href={"/about"}
                 className=" flex justify-center items-center  px-3 py-2"
@@ -178,7 +194,7 @@ export default function NavBar() {
           )}
           {/* CONTACT */}
           {activePage === "/contact" ? (
-            <li>
+            <li className="nav-bar-item">
               <div className="border mb-1 border-secondary-color"></div>
               <Link
                 className="flex justify-center items-center bg-secondary-color px-3 py-2"
@@ -203,7 +219,7 @@ export default function NavBar() {
               <div className="border mt-1 border-secondary-color"></div>
             </li>
           ) : (
-            <li>
+            <li className="nav-bar-item">
               <Link
                 href={"/contact"}
                 className=" flex justify-center items-center  px-3 py-2"
@@ -232,7 +248,7 @@ export default function NavBar() {
         </ul>
       </div>
       <div className="flex items-center px-10 justify-end w-1/4">
-        <div className="mx-2">
+        <div className="mx-2 nav-bar-item">
           <button className="handle_pointer_icon">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -247,7 +263,7 @@ export default function NavBar() {
             </svg>
           </button>
         </div>
-        <div className="mx-2">
+        <div className="mx-2 nav-bar-item">
           <button className="handle_pointer_icon">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -318,7 +334,7 @@ export default function NavBar() {
             </svg>
           </button>
         </div>
-        <div className="mx-2">
+        <div className="mx-2 nav-bar-item">
           <button className="handle_pointer_icon text-3xl">EN</button>
         </div>
       </div>

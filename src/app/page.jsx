@@ -1,23 +1,41 @@
 "use client";
 import localFont from "next/font/local";
+import gsap from "gsap";
+import { useEffect, useRef } from "react";
 import Link from "next/link";
 const rodin = localFont({
-  // src: "./utils/fonts/Rodin-Font/FOT-Rodin Pro DB.otf",
   src: "./utils/fonts/Rodin-Font/FOT-RodinPro-Bold.otf",
 });
 
 export default function Home() {
+  const textRef = useRef(null);
+
+  useEffect(() => {
+    gsap.fromTo(
+      ".animation",
+      {
+        opacity: 0,
+      },
+      {
+        duration: 1,
+        opacity: 1,
+        stagger: 0.5,
+        delay: 4,
+      }
+    );
+  }, []);
   return (
     <main>
       <div className="w-fit mx-auto">
         <h1
-          className={` ${rodin.className} my-text-shadow  mt-14 text-center text-6xl drop-shadow-2xl`}
+          ref={textRef}
+          className={`${rodin.className} animation my-text-shadow  mt-14 text-center text-6xl drop-shadow-2xl`}
         >
           Glory To Mankind
         </h1>
         <div className="text-center ">
           <h3
-            className={` ${rodin.className} text-right my-text-shadow text-4xl `}
+            className={` ${rodin.className} animation text-right my-text-shadow text-4xl `}
           >
             Welcome{" "}
             <span className="bg-secondary-color p-1 font-bold text-primary-color">
@@ -27,7 +45,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mt-10 mx-auto w-1/2 my-box-shadow ">
+      <div className="mt-10 mx-auto w-1/2 my-box-shadow animation">
         <div className="bg-secondary-color flex items-center  p-1  mx-auto">
           <span className="bg-last-color mx-2  h-5 w-5"></span>
           <span className="text-primary-color font-bold">SYSTEM</span>
@@ -49,7 +67,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mx-auto mb-10 mt-10  text-center w-2/3 ">
+      <div className="mx-auto mb-10 mt-10  text-center w-2/3 animation">
         <Link href="/home" className="inline-block">
           <svg
             xmlns="http://www.w3.org/2000/svg"

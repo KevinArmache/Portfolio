@@ -9,18 +9,16 @@ export default function SocialMedia() {
       ".social-media-item",
       {
         opacity: 0,
-
-        duration: 0.5,
         stagger: 0.5,
       },
       {
         opacity: 1,
-
+        delay: 3.5,
         duration: 0.5,
         stagger: 0.5,
       }
     );
-  });
+  }, []);
   return (
     <div className="py-5  absolute container-social-media z-50 ">
       <Link
