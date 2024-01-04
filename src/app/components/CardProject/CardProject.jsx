@@ -1,7 +1,33 @@
+"use client";
+import { useEffect } from "react";
 import Link from "next/link";
-function CardProject({ name, link }) {
+import gsap from "gsap";
+
+export default function CardProject({ name, link }) {
+  useEffect(() => {
+    gsap.fromTo(
+      ".project-item",
+      {
+        opacity: 0,
+        y: -20,
+        duration: 0.5,
+        stagger: 0.2,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.5,
+        stagger: 0.2,
+      }
+    );
+    // gsap.to(".project-item", { y: 200 });
+  }, []);
   return (
-    <Link href={link} className="w-fit text-center inline-block px-1 ">
+    <Link
+      href={link}
+      target="_blank"
+      className="w-fit m-2 text-center inline-block project-item"
+    >
       <div className="border-2 my-box-shadow border-secondary-color p-5">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -22,5 +48,3 @@ function CardProject({ name, link }) {
     </Link>
   );
 }
-
-export default CardProject;

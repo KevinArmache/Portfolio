@@ -49,14 +49,14 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mx-auto mb-10  text-center w-2/3">
-        <Link href="/home">
+      <div className="mx-auto mb-10 mt-10  text-center w-2/3 ">
+        <Link href="/home" className="inline-block">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="80"
             height="80"
             viewBox="0 0 24 24"
-            className="mx-auto mt-10 "
+            className="mx-auto "
           >
             <g
               fill="none"

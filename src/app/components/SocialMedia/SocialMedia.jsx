@@ -1,10 +1,33 @@
-import React from "react";
+"use client";
 import Link from "next/link";
+import { useEffect } from "react";
+import gsap from "gsap";
 
 export default function SocialMedia() {
+  useEffect(() => {
+    gsap.fromTo(
+      ".social-media-item",
+      {
+        opacity: 0,
+
+        duration: 0.5,
+        stagger: 0.5,
+      },
+      {
+        opacity: 1,
+
+        duration: 0.5,
+        stagger: 0.5,
+      }
+    );
+  });
   return (
     <div className="py-5  absolute container-social-media z-50 ">
-      <Link target="_blank" href="https://www.instagram.com/kevinarmache/">
+      <Link
+        target="_blank"
+        className="social-media-item"
+        href="https://www.instagram.com/kevinarmache/"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="50"
@@ -57,7 +80,11 @@ export default function SocialMedia() {
         </svg>
       </Link>
       <br />
-      <Link target="_blank" href="https://github.com/KevinArmache">
+      <Link
+        target="_blank"
+        className="social-media-item"
+        href="https://github.com/KevinArmache"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="50"
@@ -128,6 +155,7 @@ export default function SocialMedia() {
         <br />
         <Link
           target="_blank"
+          className="social-media-item"
           href="https://www.linkedin.com/in/kevin-armache-313733aa/"
         >
           <svg
@@ -186,7 +214,11 @@ export default function SocialMedia() {
           </svg>
         </Link>
         <br />
-        <Link target="_blank" href="mailto:kevinarmache@gmail.com">
+        <Link
+          target="_blank"
+          className="social-media-item"
+          href="mailto:kevinarmache@gmail.com"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="50"

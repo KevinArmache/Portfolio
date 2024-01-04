@@ -2,26 +2,26 @@
   {
     "id": 1,
     "name": "Manzibar",
-    "link": "https://www.manzibar.fr"
+    "link": "https://manzibar.fr"
   },
   {
     "id": 2,
     "name": "Asf Luthier",
-    "link": "https://www.asf-luthier.com"
+    "link": "https://asf-luthier.com"
   },
   {
     "id": 3,
     "name": "Tapotap",
-    "link": "https://www.tapotap.vercel.app"
+    "link": "https://tapotap.vercel.app"
   },
   {
     "id": 4,
     "name": "MfsCongo",
-    "link": "https://www.mfscongo.com"
+    "link": "https://mfscongo.com"
   },
   {
     "id": 5,
-    "name": "DkDigital",
-    "link": "https://www.dkdigital.netlify.app"
+    "name": "Dk Digital",
+    "link": "https://dkdigital.netlify.app"
   }
 ]

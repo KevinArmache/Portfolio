@@ -10,7 +10,7 @@ export default function page() {
         </h2>
       </div>
       {/* PROJECTS */}
-      <div className="mt-10 flex justify-center items-center">
+      <div className="mt-10 flex justify-center h-fit  flex-wrap mx-auto items-center w-3/4">
         {data.map((project) => (
           <CardProject key={project.id} {...project} />
         ))}
