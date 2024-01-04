@@ -1,6 +1,26 @@
+"use client";
 import Link from "next/link";
-
+import { useEffect } from "react";
+import gsap from "gsap";
 export default function page() {
+  const text = `"I never quite realized... how beautiful this world is."
+  `;
+  useEffect(() => {
+    gsap.fromTo(
+      ".char",
+      {
+        y: 50,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        duration: 1,
+        opacity: 1,
+        stagger: 0.5,
+        delay: 1,
+      }
+    );
+  }, []);
   return (
     <div className="flex relative">
       <div className="w-1/2 mt-10">
@@ -49,7 +69,14 @@ export default function page() {
         </div>
       </div>
       <p className="absolute -rotate-90 text-2xl left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
-        "I never quite realized... how beautiful this world is."
+        {/* "I never quite realized... how beautiful this world is." */}
+        {text.split("").map((word, index) => {
+          return (
+            <span className="char" key={index}>
+              {word}
+            </span>
+          );
+        })}
       </p>
       <div className="w-1/2">
         <div className="group border-4 relative border-secondary-color  mt-20 w-3/4 mx-auto  p-10">
