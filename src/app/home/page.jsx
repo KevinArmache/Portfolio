@@ -16,7 +16,7 @@ export default function page() {
         y: 0,
         duration: 1,
         opacity: 1,
-        stagger: 0.5,
+        stagger: 0.4,
         delay: 1,
       }
     );
@@ -61,7 +61,7 @@ export default function page() {
             Check some project ?
           </Link>
           <Link
-            href={""}
+            href={"mailto:kevinarmache@gmail.com"}
             className="border-2 transition my-text-shadow duration-300 hover:bg-secondary-color  hover:text-primary-color text-secondary-color font-bold text-xl block p-5 border-secondary-color w-1/2"
           >
             Let's talk !

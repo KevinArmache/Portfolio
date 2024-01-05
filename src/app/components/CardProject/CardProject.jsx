@@ -20,7 +20,6 @@ export default function CardProject({ name, link }) {
         stagger: 0.2,
       }
     );
-    // gsap.to(".project-item", { y: 200 });
   }, []);
   return (
     <Link
