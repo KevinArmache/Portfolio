@@ -27,7 +27,7 @@ export default function CardProject({ name, link }) {
       target="_blank"
       className="w-fit m-2 text-center inline-block project-item"
     >
-      <div className="border-2 my-box-shadow border-secondary-color p-5">
+      <div className="border-2 my-box-shadow border-secondary-color  p-5">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="250"
