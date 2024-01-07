@@ -28,7 +28,7 @@ export default function page() {
         <h2 className="text-secondary-color mt-10 font-bold text-3xl border-b-4 border-secondary-color my-text-shadow w-fit mx-auto px-10 py-5">
           HIS RECENT PROJECTS
         </h2>
-        <p className="absolute top-1/2 left-0 transform -ml-72  w-[45%] -translate-y-1/2 -rotate-90 text-center text-2xl">
+        <p className="absolute top-1/2 left-0 transform -ml-64  w-[40%] -translate-y-1/2 -rotate-90 text-center text-2xl">
           {text.split("").map((word, index) => {
             return (
               <span className="char" key={index}>
