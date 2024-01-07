@@ -2,12 +2,15 @@
 import localFont from "next/font/local";
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
+
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 const rodin = localFont({
   src: "./utils/fonts/Rodin-Font/FOT-RodinPro-Bold.otf",
 });
 
 export default function Home() {
+  const router = useRouter();
   const textRef = useRef(null);
 
   useEffect(() => {
@@ -20,10 +23,23 @@ export default function Home() {
         duration: 1,
         opacity: 1,
         stagger: 0.5,
-        delay: 4,
+        delay: 1,
       }
     );
   }, []);
+
+  const ChangePage = (e) => {
+    e.preventDefault();
+    gsap.to(".animation", {
+      duration: 0.5,
+      opacity: 0,
+      stagger: 0.5,
+      onComplete: () => {
+        router.push("/home");
+      },
+    });
+  };
+
   return (
     <main>
       <div className="w-fit mx-auto">
@@ -68,7 +84,7 @@ export default function Home() {
       </div>
 
       <div className="mx-auto mb-10 mt-10  text-center w-2/3 animation">
-        <Link href="/home" className="inline-block">
+        <Link href="/home" className="inline-block" onClick={ChangePage}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="80"
