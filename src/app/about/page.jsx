@@ -6,12 +6,22 @@ import { useEffect } from "react";
 import { gsap } from "gsap";
 
 export default function page() {
+  const text = `"Strive to build things that make a difference !"`;
   useEffect(() => {
-    // gsap.to(".part1", {
-    //   position: "sticky",
-    //   top: 0, // Spécifiez la position verticale souhaitée
-    //   left: 0,
-    // });
+    gsap.fromTo(
+      ".char",
+      {
+        y: 50,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        duration: 1,
+        opacity: 1,
+        stagger: 0.4,
+        delay: 1,
+      }
+    );
   }, []);
 
   return (
@@ -49,7 +59,13 @@ export default function page() {
         </div>
         <div className="text-center w-3/5 mx-auto  m-10 flex">
           <p className="text-xl text-secondary-color mx-auto">
-            « Strive to build things that make a difference ! »
+            {text.split("").map((word, index) => {
+              return (
+                <span className="char" key={index}>
+                  {word}
+                </span>
+              );
+            })}
           </p>
         </div>
       </div>
