@@ -1,11 +1,22 @@
+"use client";
 import React from "react";
 import CardSkill from "../components/CardSkill/CardSkill";
 import skills from "../utils/json/skills.json";
+import { useEffect } from "react";
+import { gsap } from "gsap";
 
 export default function page() {
+  useEffect(() => {
+    // gsap.to(".part1", {
+    //   position: "sticky",
+    //   top: 0, // Spécifiez la position verticale souhaitée
+    //   left: 0,
+    // });
+  }, []);
+
   return (
-    <div className="flex relative">
-      <div className="w-1/2 mt-10">
+    <div className="flex relative ">
+      <div className="w-1/2 mt-10 part1">
         <div>
           <h2 className="text-secondary-color font-bold text-3xl border-b-4 border-secondary-color my-text-shadow w-fit mx-auto px-10 py-5">
             WHO HE IS
@@ -43,13 +54,13 @@ export default function page() {
         </div>
       </div>
 
-      <div className="w-1/2 mt-10 ">
+      <div className="w-1/2 mt-10">
         <div>
           <h2 className="text-secondary-color font-bold text-3xl border-b-4 border-secondary-color my-text-shadow w-fit mx-auto px-10 py-5">
             PROFESSIONAL SKILLS
           </h2>
         </div>
-        <div className="flex justify-center items-center  flex-wrap mt-10  w-10/12 mx-auto">
+        <div className="flex  justify-center items-center  flex-wrap mt-10  w-10/12 mx-auto">
           {skills.map((skill) => (
             <CardSkill key={skill.id} {...skill} />
           ))}

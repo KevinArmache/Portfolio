@@ -38,5 +38,10 @@
     "id": 8,
     "name": "strapi",
     "svg": "simple-icons:strapi"
+  },
+  {
+    "id": 9,
+    "name": "github",
+    "svg": "line-md:github-loop"
   }
 ]

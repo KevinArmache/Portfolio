@@ -41,7 +41,7 @@ export default function CardProject({ name, link }) {
           />
         </svg>
       </div>
-      <span className="text-xl my-box-shadow my-text-shadow font-bold text-secondary-color uppercase py-2 border-2 border-secondary-color block mt-3">
+      <span className="text-xl bg-[#DAD4BB] my-box-shadow my-text-shadow font-bold text-secondary-color uppercase py-2 border-2 border-secondary-color block mt-3">
         {name}
       </span>
     </Link>
