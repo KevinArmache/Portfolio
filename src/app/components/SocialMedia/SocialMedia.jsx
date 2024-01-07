@@ -15,6 +15,7 @@ export default function SocialMedia() {
       },
       {
         opacity: 1,
+        delay: 3.5,
         duration: 0.5,
         stagger: 0.5,
       }

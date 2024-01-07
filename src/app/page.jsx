@@ -47,7 +47,7 @@ export default function Home() {
           ref={textRef}
           className={`${rodin.className} animation my-text-shadow  mt-14 text-center text-6xl drop-shadow-2xl`}
         >
-          Glory To Mankind
+          For The Glory of Mankind
         </h1>
         <div className="text-center ">
           <h3

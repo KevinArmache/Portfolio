@@ -3,6 +3,7 @@ import React from "react";
 import Link from "next/link";
 import { useEffect } from "react";
 import { gsap } from "gsap";
+import Image from "next/image";
 
 export default function page() {
   const text = `"I seek to learn and adopt all facets of humanity ! Some desire love! Others family! Only then did I realize the truth...the core of humanity... is conflict. They fight. Steal. Kill. This is humanity in its purest form !"`;
@@ -22,12 +23,25 @@ export default function page() {
       }
     );
   }, []);
+
   return (
-    <div className="h-screen flex flex-col justify-center items-center">
-      <div className=" border-4 border-secondary-color p-20 w-fit mx-auto flex flex-col justify-center items-center">
+    <div className="h-screen relative flex flex-col justify-center items-center">
+      <Image
+        className="absolute bottom-0 left-0 ml-10 "
+        src="/assets/nier-image.png"
+        width={200}
+        height={200}
+      />{" "}
+      <Image
+        className="absolute bottom-0 right-0 ml-10 transform scale-x-[-1]"
+        src="/assets/nier-image.png"
+        width={200}
+        height={200}
+      />
+      <div className=" border-4 border-secondary-color p-32 w-fit mx-auto flex flex-col justify-center items-center">
         <Link
           target="_blank"
-          className="social-media-item"
+          className="social-media-item-on-contact-page"
           href="https://www.instagram.com/kevinarmache/"
         >
           <svg
@@ -84,7 +98,7 @@ export default function page() {
         <br />
         <Link
           target="_blank"
-          className="social-media-item"
+          className="social-media-item-on-contact-page"
           href="https://github.com/KevinArmache"
         >
           <svg
@@ -157,7 +171,7 @@ export default function page() {
           <br />
           <Link
             target="_blank"
-            className="social-media-item"
+            className="social-media-item-on-contact-page"
             href="https://www.linkedin.com/in/kevin-armache-313733aa/"
           >
             <svg
@@ -218,7 +232,7 @@ export default function page() {
           <br />
           <Link
             target="_blank"
-            className="social-media-item"
+            className="social-media-item-on-contact-page"
             href="mailto:kevinarmache@gmail.com"
           >
             <svg
