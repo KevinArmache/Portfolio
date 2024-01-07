@@ -1,9 +1,11 @@
 "use client";
 import Link from "next/link";
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 import gsap from "gsap";
 
 export default function SocialMedia() {
+  const pathname = usePathname();
   useEffect(() => {
     gsap.fromTo(
       ".social-media-item",
@@ -13,14 +15,17 @@ export default function SocialMedia() {
       },
       {
         opacity: 1,
-        delay: 3.5,
         duration: 0.5,
         stagger: 0.5,
       }
     );
   }, []);
   return (
-    <div className="py-5  absolute container-social-media z-50 ">
+    <div
+      className={`py-5 absolute container-social-media z-50 ${
+        pathname === "/contact" ? "invisible" : ""
+      }`}
+    >
       <Link
         target="_blank"
         className="social-media-item"
