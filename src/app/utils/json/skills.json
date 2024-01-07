@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Javascript",
+    "svg": "fluent:javascript-16-filled"
+  },
+  {
+    "id": 2,
+    "name": "Reactjs",
+    "svg": "tabler:brand-react-native"
+  },
+  {
+    "id": 3,
+    "name": "NextJs",
+    "svg": "file-icons:nextjs"
+  },
+  {
+    "id": 4,
+    "name": "Git",
+    "svg": "la:git"
+  },
+  {
+    "id": 5,
+    "name": "NodeJS",
+    "svg": "mdi:nodejs"
+  },
+  {
+    "id": 6,
+    "name": "prisma",
+    "svg": "file-icons:prisma"
+  },
+  {
+    "id": 7,
+    "name": "GSAP",
+    "svg": "cib:greensock"
+  },
+  {
+    "id": 8,
+    "name": "strapi",
+    "svg": "simple-icons:strapi"
+  }
+]
