@@ -1,11 +1,23 @@
 "use client";
 import gsap from "gsap";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 
 export default function NavBar() {
   const [activePage, setActivePage] = useState("");
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef(null);
+
+  const togglePlay = () => {
+    if (audioRef.current.paused) {
+      audioRef.current.play();
+      setIsPlaying(true);
+    } else {
+      setIsPlaying(false);
+      audioRef.current.pause();
+    }
+  };
   const pathname = usePathname();
   useEffect(() => {
     gsap.fromTo(
@@ -248,7 +260,7 @@ export default function NavBar() {
         </ul>
       </div>
       <div className="flex items-center px-10 justify-end w-1/4">
-        <div className="mx-2 nav-bar-item">
+        {/* <div className="mx-2 nav-bar-item">
           <button className="handle_pointer_icon">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -262,8 +274,44 @@ export default function NavBar() {
               />
             </svg>
           </button>
+        </div> */}
+        <div>
+          <div className="mx-2 nav-bar-item">
+            <button onClick={togglePlay}>
+              {isPlaying ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="#4E4B42"
+                    d="M12 3v10.55c-.59-.34-1.27-.55-2-.55c-2.21 0-4 1.79-4 4s1.79 4 4 4s4-1.79 4-4V7h4V3z"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="#4E4B42"
+                    d="M4.27 3L3 4.27l9 9v.28c-.59-.34-1.27-.55-2-.55c-2.21 0-4 1.79-4 4s1.79 4 4 4s4-1.79 4-4v-1.73L19.73 21L21 19.73zM14 7h4V3h-6v5.18l2 2Z"
+                  />
+                </svg>
+              )}
+            </button>
+          </div>
+          <audio
+            ref={audioRef}
+            controls={false}
+            src="/assets/song/3-08 Blissful Death.mp3"
+          />
         </div>
-        <div className="mx-2 nav-bar-item">
+        {/* <div className="mx-2 nav-bar-item">
           <button className="handle_pointer_icon">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -333,10 +381,10 @@ export default function NavBar() {
               </g>
             </svg>
           </button>
-        </div>
-        <div className="mx-2 nav-bar-item">
+        </div> */}
+        {/* <div className="mx-2 nav-bar-item">
           <button className="handle_pointer_icon text-3xl">EN</button>
-        </div>
+        </div> */}
       </div>
     </div>
   );

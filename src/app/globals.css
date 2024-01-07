@@ -19,7 +19,8 @@ body {
 }
 
 .handle_pointer_icon,
-a:hover {
+a:hover,
+button:hover {
   cursor: url("/assets/icons/Hand_Point.png") 10 10, auto;
 }
 
