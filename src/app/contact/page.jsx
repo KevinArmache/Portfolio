@@ -33,7 +33,7 @@ export default function page() {
         height={200}
       />{" "}
       <Image
-        className="absolute bottom-0 right-0 ml-10 transform scale-x-[-1]"
+        className="absolute bottom-0 right-0 mr-10 transform scale-x-[-1]"
         src="/assets/nier-image.png"
         width={200}
         height={200}
