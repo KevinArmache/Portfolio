@@ -20,10 +20,22 @@ export default function page() {
         delay: 1,
       }
     );
+    gsap.fromTo(
+      ".part-1",
+      {
+        opacity: 0,
+      },
+      {
+        duration: 1,
+        opacity: 1,
+        stagger: 0.5,
+        delay: 1,
+      }
+    );
   }, []);
   return (
     <div className="flex relative">
-      <div className="w-1/2 mt-10">
+      <div className="w-1/2 mt-10 part-1">
         <div>
           <h2 className="text-secondary-color font-bold text-3xl border-b-4 border-secondary-color my-text-shadow w-fit mx-auto px-10 py-5">
             AN INTRODUCTION ABOUT HIM

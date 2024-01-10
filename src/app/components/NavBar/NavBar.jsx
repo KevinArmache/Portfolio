@@ -8,6 +8,7 @@ export default function NavBar() {
   const [activePage, setActivePage] = useState("");
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(null);
+  const pathname = usePathname();
 
   const togglePlay = () => {
     if (audioRef.current.paused) {
@@ -18,7 +19,6 @@ export default function NavBar() {
       audioRef.current.pause();
     }
   };
-  const pathname = usePathname();
   useEffect(() => {
     gsap.fromTo(
       ".nav-bar-item",
@@ -34,6 +34,19 @@ export default function NavBar() {
       }
     );
   }, []);
+
+  //   const ChangePage = (e) => {
+  //     if (pathname === "/home") {
+  //       gsap.to(".animation", {
+  //         duration: 0.5,
+  //         opacity: 0,
+  //         stagger: 0.5,
+  //         onComplete: () => {
+  //           router.push("/home");
+  //         },
+  //       });
+  //     }
+  // };
 
   useEffect(() => {
     // Mettre à jour l'état activePage en fonction de l'URL actuelle
