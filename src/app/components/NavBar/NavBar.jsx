@@ -322,6 +322,7 @@ export default function NavBar() {
             ref={audioRef}
             controls={false}
             src="/assets/song/3-08 Blissful Death.mp3"
+            loop
           />
         </div>
         {/* <div className="mx-2 nav-bar-item">

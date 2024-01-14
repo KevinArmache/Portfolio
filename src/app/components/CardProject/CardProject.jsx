@@ -11,13 +11,12 @@ export default function CardProject({ name, link }) {
         opacity: 0,
         y: -20,
         duration: 0.5,
-        stagger: 0.2,
       },
       {
         opacity: 1,
         y: 0,
         duration: 0.5,
-        stagger: 0.2,
+        stagger: 0.5,
       }
     );
   }, []);
@@ -25,7 +24,7 @@ export default function CardProject({ name, link }) {
     <Link
       href={link}
       target="_blank"
-      className="w-fit m-2 text-center inline-block project-item"
+      className="w-fit opacity-0 m-2 text-center inline-block project-item"
     >
       <div className="border-2 my-box-shadow border-secondary-color p-5">
         <svg

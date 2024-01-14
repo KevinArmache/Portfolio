@@ -1,8 +1,10 @@
 "use client";
 import Link from "next/link";
 import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 import gsap from "gsap";
 export default function page() {
+  const router = useRouter();
   const text = `"I never quite realized... how beautiful this world is."
   `;
   useEffect(() => {
@@ -21,7 +23,7 @@ export default function page() {
       }
     );
     gsap.fromTo(
-      ".part-1",
+      ".animation",
       {
         opacity: 0,
       },
@@ -33,9 +35,22 @@ export default function page() {
       }
     );
   }, []);
+
+  const ChangePage = (e) => {
+    e.preventDefault();
+    gsap.to(".animation", {
+      duration: 0.5,
+      opacity: 0,
+      stagger: 0.5,
+      onComplete: () => {
+        router.push("/project");
+      },
+    });
+  };
+
   return (
     <div className="flex relative">
-      <div className="w-1/2 mt-10 part-1">
+      <div className="w-1/2 mt-10 animation">
         <div>
           <h2 className="text-secondary-color font-bold text-3xl border-b-4 border-secondary-color my-text-shadow w-fit mx-auto px-10 py-5">
             AN INTRODUCTION ABOUT HIM
@@ -66,12 +81,12 @@ export default function page() {
           </div>
         </div>
         <div className="text-center w-3/5 mx-auto  m-10 flex">
-          <Link
-            href="/project"
+          <button
+            onClick={ChangePage}
             className=" bg-secondary-color my-text-shadow text-primary-color font-bold text-xl block p-5 w-1/2"
           >
             Check some project ?
-          </Link>
+          </button>
           <Link
             href={"mailto:kevinarmache@gmail.com"}
             className="border-2 transition my-text-shadow duration-300 hover:bg-secondary-color  hover:text-primary-color text-secondary-color font-bold text-xl block p-5 border-secondary-color w-1/2"
@@ -80,7 +95,7 @@ export default function page() {
           </Link>
         </div>
       </div>
-      <p className="absolute -rotate-90 text-2xl left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      <p className="absolute animation -rotate-90 text-2xl left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
         {/* "I never quite realized... how beautiful this world is." */}
         {text.split("").map((word, index) => {
           return (
@@ -90,7 +105,7 @@ export default function page() {
           );
         })}
       </p>
-      <div className="w-1/2">
+      <div className="w-1/2 animation">
         <div className="group border-4 relative border-secondary-color  mt-20 w-3/4 mx-auto  p-10">
           <svg
             xmlns="http://www.w3.org/2000/svg"
