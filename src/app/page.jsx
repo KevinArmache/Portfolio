@@ -41,19 +41,19 @@ export default function Home() {
   };
 
   return (
-    <main>
-      <div className="w-fit mx-auto">
+    <main className="">
+      <div className="w-fit mx-auto ">
         <h1
           ref={textRef}
-          className={`${rodin.className} animation my-text-shadow  mt-14 text-center text-6xl drop-shadow-2xl`}
+          className={`${rodin.className} animation opacity-0 my-text-shadow  mt-14 text-center text-6xl drop-shadow-2xl`}
         >
-          For The Glory of Mankind
+          Welcome
         </h1>
         <div className="text-center ">
           <h3
-            className={` ${rodin.className} animation text-right my-text-shadow text-4xl `}
+            className={` ${rodin.className} animation  opacity-0 text-right my-text-shadow text-3xl `}
           >
-            Welcome{" "}
+            Dear{" "}
             <span className="bg-secondary-color p-1 font-bold text-primary-color">
               human
             </span>
@@ -61,7 +61,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mt-10 mx-auto w-1/2 my-box-shadow animation">
+      <div className="mt-10 mx-auto w-1/2 my-box-shadow animation opacity-0">
         <div className="bg-secondary-color flex items-center  p-1  mx-auto">
           <span className="bg-last-color mx-2  h-5 w-5"></span>
           <span className="text-primary-color font-bold">SYSTEM</span>
@@ -83,7 +83,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mx-auto mb-10 mt-10  text-center w-2/3 animation">
+      <div className="mx-auto mb-10 mt-10 opacity-0  text-center w-2/3 animation">
         <Link href="/home" className="inline-block" onClick={ChangePage}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
