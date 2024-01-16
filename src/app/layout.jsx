@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import NavBar from "./components/NavBar/NavBar";
+import MobileNavbar from "./components/MobileNavbar/MobileNavbar";
 import SocialMedia from "./components/SocialMedia/SocialMedia";
 import Footer from "./components/Footer/Footer";
 import "./globals.css";
@@ -17,7 +18,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${inter.className} flex flex-col min-h-screen`}>
         <header>
-          <NavBar />
+          <NavBar className="md:block sm:hidden" />
+          <MobileNavbar />
         </header>
         <SocialMedia />
         {children}

@@ -41,8 +41,8 @@ export default function Home() {
   };
 
   return (
-    <main className="">
-      <div className="w-fit mx-auto ">
+    <main className="md:bor">
+      <div className="w-fit mx-auto md:border-2 md:border-red-500 sm:border-2">
         <h1
           ref={textRef}
           className={`${rodin.className} animation opacity-0 my-text-shadow  mt-14 text-center text-6xl drop-shadow-2xl`}
@@ -61,7 +61,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mt-10 mx-auto w-1/2 my-box-shadow animation opacity-0">
+      <div className="mt-10 mx-auto lg:w-1/2 md:w-2/3 w-[80%] my-box-shadow animation opacity-0">
         <div className="bg-secondary-color flex items-center  p-1  mx-auto">
           <span className="bg-last-color mx-2  h-5 w-5"></span>
           <span className="text-primary-color font-bold">SYSTEM</span>

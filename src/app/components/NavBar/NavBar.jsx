@@ -55,7 +55,7 @@ export default function NavBar() {
     setActivePage(pathname);
   }, [pathname]);
   return (
-    <div className="flex border-b-2 border-black">
+    <div className="flex border-b-2 border-black md:block sm:hidden ">
       <div className=" w-3/4">
         <ul className="flex p-4 items-center">
           {activePage === "/home" ? (
