@@ -22,18 +22,30 @@ export default function page() {
         delay: 1,
       }
     );
+    gsap.fromTo(
+      ".animation",
+      {
+        opacity: 0,
+      },
+      {
+        duration: 1,
+        opacity: 1,
+        stagger: 0.5,
+        delay: 1,
+      }
+    );
   }, []);
 
   return (
     <div className="flex relative ">
       <div className="w-1/2 mt-10 part1">
         <div>
-          <h2 className="text-secondary-color font-bold text-3xl border-b-4 border-secondary-color my-text-shadow w-fit mx-auto px-10 py-5">
+          <h2 className="text-secondary-color animation font-bold text-3xl border-b-4 border-secondary-color my-text-shadow w-fit mx-auto px-10 py-5">
             WHO HE IS
           </h2>
         </div>
 
-        <div className="mt-10 mx-auto w-3/4 my-box-shadow  ">
+        <div className="mt-10 mx-auto w-3/4 my-box-shadow animation ">
           <div className="bg-secondary-color flex items-center  p-1  mx-auto">
             <span className="bg-last-color mx-2  h-5 w-5"></span>
             <span className="text-primary-color font-bold">SYSTEM</span>
@@ -57,7 +69,7 @@ export default function page() {
             </p>
           </div>
         </div>
-        <div className="text-center w-3/5 mx-auto  m-10 flex">
+        <div className="text-center w-3/5 mx-auto animation  m-10 flex">
           <p className="text-xl text-secondary-color mx-auto">
             {text.split("").map((word, index) => {
               return (
@@ -72,11 +84,11 @@ export default function page() {
 
       <div className="w-1/2 mt-10">
         <div>
-          <h2 className="text-secondary-color font-bold text-3xl border-b-4 border-secondary-color my-text-shadow w-fit mx-auto px-10 py-5">
+          <h2 className="text-secondary-color animation font-bold text-3xl border-b-4 border-secondary-color my-text-shadow w-fit mx-auto px-10 py-5">
             PROFESSIONAL SKILLS
           </h2>
         </div>
-        <div className="flex  justify-center items-center  flex-wrap mt-10  w-10/12 mx-auto">
+        <div className="flex  animation justify-center items-center  flex-wrap mt-10  w-10/12 mx-auto">
           {skills.map((skill) => (
             <CardSkill key={skill.id} {...skill} />
           ))}

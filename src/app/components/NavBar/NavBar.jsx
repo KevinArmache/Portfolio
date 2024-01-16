@@ -2,11 +2,14 @@
 import gsap from "gsap";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
+import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
 
 export default function NavBar() {
   const [activePage, setActivePage] = useState("");
   const [isPlaying, setIsPlaying] = useState(false);
+
+  const router = useRouter();
   const audioRef = useRef(null);
   const pathname = usePathname();
 
@@ -35,18 +38,17 @@ export default function NavBar() {
     );
   }, []);
 
-  //   const ChangePage = (e) => {
-  //     if (pathname === "/home") {
-  //       gsap.to(".animation", {
-  //         duration: 0.5,
-  //         opacity: 0,
-  //         stagger: 0.5,
-  //         onComplete: () => {
-  //           router.push("/home");
-  //         },
-  //       });
-  //     }
-  // };
+  const ChangePage = (e, path) => {
+    e.preventDefault();
+    gsap.to(".animation", {
+      duration: 0.5,
+      opacity: 0,
+      stagger: 0.5,
+      onComplete: () => {
+        router.push(`${window.location.origin}/${path}`);
+      },
+    });
+  };
 
   useEffect(() => {
     // Mettre à jour l'état activePage en fonction de l'URL actuelle
@@ -62,6 +64,7 @@ export default function NavBar() {
               <Link
                 className="flex justify-center items-center bg-secondary-color px-3 py-2 "
                 href={"/home"}
+                onClick={ChangePage}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -87,6 +90,7 @@ export default function NavBar() {
               <Link
                 className="flex justify-center items-center px-3 py-2 "
                 href={"/home"}
+                onClick={(e) => ChangePage(e, "/home")}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -116,6 +120,7 @@ export default function NavBar() {
               <Link
                 className="flex justify-center items-center bg-secondary-color px-3 py-2"
                 href={"/project"}
+                onClick={(e) => ChangePage(e, "/project")}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -140,7 +145,8 @@ export default function NavBar() {
             <li className="nav-bar-item">
               <Link
                 href={"/project"}
-                className=" flex justify-center items-center  px-3 "
+                className=" flex justify-center items-center  px-3"
+                onClick={(e) => ChangePage(e, "/project")}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -170,6 +176,7 @@ export default function NavBar() {
               <Link
                 className="flex justify-center items-center bg-secondary-color px-3 py-2"
                 href={"/project"}
+                onClick={(e) => ChangePage(e, "/about")}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -193,6 +200,7 @@ export default function NavBar() {
           ) : (
             <li className="nav-bar-item">
               <Link
+                onClick={(e) => ChangePage(e, "/about")}
                 href={"/about"}
                 className=" flex justify-center items-center  px-3 py-2"
               >
@@ -224,6 +232,7 @@ export default function NavBar() {
               <Link
                 className="flex justify-center items-center bg-secondary-color px-3 py-2"
                 href={"/contact"}
+                onClick={(e) => ChangePage(e, "/contact")}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -246,6 +255,7 @@ export default function NavBar() {
           ) : (
             <li className="nav-bar-item">
               <Link
+                onClick={(e) => ChangePage(e, "/contact")}
                 href={"/contact"}
                 className=" flex justify-center items-center  px-3 py-2"
               >

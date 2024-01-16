@@ -24,7 +24,7 @@ export default function CardProject({ name, link }) {
     <Link
       href={link}
       target="_blank"
-      className="w-fit opacity-0 m-2 text-center inline-block project-item"
+      className="w-fit opacity-0 m-2  text-center inline-block project-item"
     >
       <div className="border-2 my-box-shadow border-secondary-color p-5">
         <svg

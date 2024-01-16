@@ -22,26 +22,26 @@ export default function page() {
         delay: 1,
       }
     );
+    gsap.fromTo(
+      ".animation",
+      {
+        opacity: 0,
+      },
+      {
+        duration: 1,
+        opacity: 1,
+        stagger: 0.5,
+        delay: 1,
+      }
+    );
   }, []);
 
   return (
     <div className="h-screen relative flex flex-col justify-center items-center">
-      <Image
-        className="absolute bottom-0 left-0 ml-10 "
-        src="/assets/nier-image.png"
-        width={200}
-        height={200}
-      />{" "}
-      <Image
-        className="absolute bottom-0 right-0 mr-10 transform scale-x-[-1]"
-        src="/assets/nier-image.png"
-        width={200}
-        height={200}
-      />
       <div className=" border-4 border-secondary-color p-32 w-fit mx-auto flex flex-col justify-center items-center">
         <Link
           target="_blank"
-          className="social-media-item-on-contact-page"
+          className="social-media-item-on-contact-page animation opacity-0"
           href="https://www.instagram.com/kevinarmache/"
         >
           <svg
@@ -98,7 +98,7 @@ export default function page() {
         <br />
         <Link
           target="_blank"
-          className="social-media-item-on-contact-page"
+          className="social-media-item-on-contact-page animation opacity-0"
           href="https://github.com/KevinArmache"
         >
           <svg
@@ -171,7 +171,7 @@ export default function page() {
           <br />
           <Link
             target="_blank"
-            className="social-media-item-on-contact-page"
+            className="social-media-item-on-contact-page animation opacity-0"
             href="https://www.linkedin.com/in/kevin-armache-313733aa/"
           >
             <svg
@@ -232,7 +232,7 @@ export default function page() {
           <br />
           <Link
             target="_blank"
-            className="social-media-item-on-contact-page"
+            className="social-media-item-on-contact-page animation opacity-0"
             href="mailto:kevinarmache@gmail.com"
           >
             <svg
@@ -282,15 +282,27 @@ export default function page() {
           </Link>
         </div>
       </div>
-      <p className="text-xl w-1/2 mt-10 text-center text-secondary-color mx-auto">
+      <p className="text-xl animation opacity-0 w-1/2 mt-10 text-center text-secondary-color mx-auto">
         {text.split("").map((word, index) => {
           return (
-            <span className="char" key={index}>
+            <span className="char " key={index}>
               {word}
             </span>
           );
         })}
       </p>
+      <Image
+        className="absolute bottom-0 opacity-0 left-0 ml-10 animation"
+        src="/assets/nier-image.png"
+        width={200}
+        height={200}
+      />{" "}
+      <Image
+        className="absolute bottom-0 opacity-0 right-0 mr-10 transform scale-x-[-1] animation"
+        src="/assets/nier-image.png"
+        width={200}
+        height={200}
+      />
     </div>
   );
 }

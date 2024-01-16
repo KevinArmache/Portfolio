@@ -22,17 +22,18 @@ export default function page() {
       }
     );
   }, []);
+
   return (
     <div className="relative">
       <div>
-        <h2 className="text-secondary-color char mt-10 font-bold text-3xl border-b-4 border-secondary-color my-text-shadow w-fit mx-auto px-10 py-5">
+        <h2 className="text-secondary-color animation  opacity-0 char mt-10 font-bold text-3xl border-b-4 border-secondary-color my-text-shadow w-fit mx-auto px-10 py-5">
           HIS RECENT PROJECTS
         </h2>
 
-        <p className="absolute top-1/2 left-0 transform -ml-64  w-[40%] -translate-y-1/2 -rotate-90 text-center text-2xl">
+        <p className="absolute animation top-1/2 left-0 transform -ml-64  w-[40%] -translate-y-1/2 -rotate-90 text-center text-2xl">
           {text.split("").map((word, index) => {
             return (
-              <span className="char" key={index}>
+              <span className="char opacity-0" key={index}>
                 {word}
               </span>
             );
@@ -40,9 +41,9 @@ export default function page() {
         </p>
       </div>
       {/* PROJECTS */}
-      <div className="mt-10 flex justify-center h-fit  flex-wrap mx-auto items-center w-3/4">
+      <div className="mt-10 flex animation justify-center h-fit  flex-wrap mx-auto items-center w-3/4">
         {data.map((project) => (
-          <CardProject key={project.id} {...project} />
+          <CardProject className="" key={project.id} {...project} />
         ))}
       </div>
     </div>
