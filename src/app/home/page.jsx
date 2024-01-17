@@ -83,19 +83,19 @@ export default function page() {
         <div className="text-center  md:w-3/5 w-[85%] mx-auto  m-10 flex">
           <button
             onClick={ChangePage}
-            className=" bg-secondary-color my-text-shadow text-primary-color font-bold md:text-xl text-xs block p-5 w-1/2"
+            className="bg-secondary-color flex justify-center items-center my-text-shadow text-primary-color font-bold md:text-xl text-xs  p-5 w-1/2"
           >
             Check some project ?
           </button>
           <Link
             href={"mailto:kevinarmache@gmail.com"}
-            className="border-2 transition my-text-shadow duration-300 hover:bg-secondary-color  hover:text-primary-color text-secondary-color font-bold md:text-xl text-xs block p-5 border-secondary-color w-1/2"
+            className="border-2 flex justify-center items-center  transition my-text-shadow duration-300 hover:bg-secondary-color  hover:text-primary-color text-secondary-color font-bold md:text-xl text-xs  p-5 border-secondary-color w-1/2"
           >
             Let's talk !
           </Link>
         </div>
       </div>
-      <p className="lg:absolute block animation opacity-0 lg:-rotate-90 rotate-0 md:text-2xl text-sm left-1/2 top-1/2 md:transform lg:-translate-x-1/2 md:-translate-y-1/2">
+      <p className="lg:absolute  block animation opacity-0 lg:-rotate-90 rotate-0 md:text-2xl text-sm left-1/2 top-1/2 md:transform lg:-translate-x-1/2 md:-translate-y-1/2">
         {text.split("").map((word, index) => {
           return (
             <span className="char " key={index}>
