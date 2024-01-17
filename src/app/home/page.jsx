@@ -52,12 +52,12 @@ export default function page() {
     <div className="lg:flex lg:flex-row flex flex-col items-center  relative">
       <div className="  lg:w-1/2 w-[95%] mt-10 opacity-0 animation">
         <div className="">
-          <h2 className="text-secondary-color  font-bold md:text-3xl text-xl text-center  md:border-b-4 border-b-2 border-secondary-color my-text-shadow w-fit mx-auto px-10 py-5">
+          <h2 className="text-secondary-color  font-bold md:text-3xl text-lg text-center  md:border-b-4 border-b-2 border-secondary-color my-text-shadow w-fit mx-auto px-10 md:py-5 py-2">
             AN INTRODUCTION ABOUT HIM
           </h2>
         </div>
 
-        <div className="mt-10 mx-auto w-3/4 my-box-shadow ">
+        <div className="mt-10 mx-auto md:w-3/4 w-[90%] my-box-shadow ">
           <div className="bg-secondary-color flex items-center  p-1  mx-auto">
             <span className="bg-last-color mx-2  h-5 w-5"></span>
             <span className="text-primary-color font-bold">SYSTEM</span>
@@ -80,16 +80,16 @@ export default function page() {
             </p>
           </div>
         </div>
-        <div className="text-center  md:w-3/5 w-4/5 mx-auto  m-10 flex">
+        <div className="text-center  md:w-3/5 w-[85%] mx-auto  m-10 flex">
           <button
             onClick={ChangePage}
-            className=" bg-secondary-color my-text-shadow text-primary-color font-bold md:text-xl text-sm block p-5 w-1/2"
+            className=" bg-secondary-color my-text-shadow text-primary-color font-bold md:text-xl text-xs block p-5 w-1/2"
           >
             Check some project ?
           </button>
           <Link
             href={"mailto:kevinarmache@gmail.com"}
-            className="border-2 transition my-text-shadow duration-300 hover:bg-secondary-color  hover:text-primary-color text-secondary-color font-bold md:text-xl text-sm block p-5 border-secondary-color w-1/2"
+            className="border-2 transition my-text-shadow duration-300 hover:bg-secondary-color  hover:text-primary-color text-secondary-color font-bold md:text-xl text-xs block p-5 border-secondary-color w-1/2"
           >
             Let's talk !
           </Link>

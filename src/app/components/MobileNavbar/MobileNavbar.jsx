@@ -11,7 +11,6 @@ export default function MobileNavbar() {
   const closeMenu = () => setIsOpen(false);
 
   const audioRef = useRef(null);
-
   const togglePlay = () => {
     if (audioRef.current.paused) {
       audioRef.current.play();
@@ -32,7 +31,7 @@ export default function MobileNavbar() {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
+              className="h-5 w-5 "
               fill="none"
               viewBox="0 0 24 24"
               stroke="#4a473d"
@@ -94,7 +93,7 @@ export default function MobileNavbar() {
       <div className="navbar-center">
         <Link
           href={"/home"}
-          className="btn btn-ghost nav-bar-item text-xl text-secondary-color "
+          className="btn btn-ghost my-text-shadow nav-bar-item text-xl text-secondary-color "
         >
           ケビン
         </Link>
