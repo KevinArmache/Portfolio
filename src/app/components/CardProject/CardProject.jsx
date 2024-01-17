@@ -29,10 +29,8 @@ export default function CardProject({ name, link }) {
       <div className="border-2 my-box-shadow border-secondary-color p-5">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="250"
-          height="250"
           viewBox="0 0 320 512"
-          className="mx-auto "
+          className="mx-auto md:w-60 w-36"
         >
           <path
             fill="#4a473d"
@@ -40,7 +38,7 @@ export default function CardProject({ name, link }) {
           />
         </svg>
       </div>
-      <span className="text-xl bg-[#DAD4BB] my-box-shadow my-text-shadow font-bold text-secondary-color uppercase py-2 border-2 border-secondary-color block mt-3">
+      <span className="md:text-xl text-sm bg-[#DAD4BB] my-box-shadow my-text-shadow font-bold text-secondary-color uppercase py-2 border-2 border-secondary-color block mt-3">
         {name}
       </span>
     </Link>

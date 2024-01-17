@@ -29,16 +29,6 @@ export default function page() {
         <h2 className="text-secondary-color animation  opacity-0 char mt-10 font-bold md:text-3xl text-lg text-center  md:border-b-4 border-b-2 border-secondary-color my-text-shadow w-fit mx-auto md:px-10 px-5 md:py-5 py-2">
           HIS RECENT PROJECTS
         </h2>
-
-        <p className="absolute animation top-1/2 left-0 transform -ml-64  w-[40%] -translate-y-1/2 -rotate-90 text-center text-2xl">
-          {text.split("").map((word, index) => {
-            return (
-              <span className="char opacity-0" key={index}>
-                {word}
-              </span>
-            );
-          })}
-        </p>
       </div>
       {/* PROJECTS */}
       <div className="mt-10 flex animation justify-center h-fit  flex-wrap mx-auto items-center w-3/4">
@@ -46,6 +36,15 @@ export default function page() {
           <CardProject className="" key={project.id} {...project} />
         ))}
       </div>
+      <p className="md:absolute block animation md:top-1/2 md:left-0 md:transform md:-ml-64  md:w-[40%] w-[80%] md:-translate-y-1/2 md:-rotate-90 text-center md:text-2xl text-sm mx-auto md:p-0 p-5">
+        {text.split("").map((word, index) => {
+          return (
+            <span className="char opacity-0" key={index}>
+              {word}
+            </span>
+          );
+        })}
+      </p>
     </div>
   );
 }
