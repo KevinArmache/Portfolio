@@ -52,7 +52,7 @@ export default function page() {
     <div className="lg:flex lg:flex-row flex flex-col items-center  relative">
       <div className="  lg:w-1/2 w-[95%] mt-10 opacity-0 animation">
         <div className="">
-          <h2 className="text-secondary-color  font-bold md:text-3xl text-lg text-center  md:border-b-4 border-b-2 border-secondary-color my-text-shadow w-fit mx-auto px-10 md:py-5 py-2">
+          <h2 className="text-secondary-color  font-bold md:text-3xl text-lg text-center  md:border-b-4 border-b-2 border-secondary-color my-text-shadow w-fit mx-auto md:px-10 px-5 md:py-5 py-2">
             AN INTRODUCTION ABOUT HIM
           </h2>
         </div>
