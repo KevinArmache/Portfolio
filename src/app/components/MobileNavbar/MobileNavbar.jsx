@@ -27,7 +27,7 @@ export default function MobileNavbar() {
           <div
             tabIndex={0}
             role="button"
-            className="btn nav-bar-item btn-ghost btn-circle"
+            className="btn opacity-0 nav-bar-item btn-ghost btn-circle"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -93,14 +93,14 @@ export default function MobileNavbar() {
       <div className="navbar-center">
         <Link
           href={"/home"}
-          className="btn btn-ghost my-text-shadow nav-bar-item text-xl text-secondary-color "
+          className="btn btn-ghost my-text-shadow opacity-0 nav-bar-item text-xl text-secondary-color "
         >
           ケビン
         </Link>
       </div>
       <div className="navbar-end">
         <div>
-          <div className="mx-2 nav-bar-item">
+          <div className="mx-2 opacity-0 nav-bar-item">
             <button onClick={togglePlay}>
               {isPlaying ? (
                 <svg
