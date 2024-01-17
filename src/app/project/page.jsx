@@ -26,7 +26,7 @@ export default function page() {
   return (
     <div className="relative">
       <div>
-        <h2 className="text-secondary-color animation  opacity-0 char mt-10 font-bold text-3xl border-b-4 border-secondary-color my-text-shadow w-fit mx-auto px-10 py-5">
+        <h2 className="text-secondary-color animation  opacity-0 char mt-10 font-bold md:text-3xl text-lg text-center  md:border-b-4 border-b-2 border-secondary-color my-text-shadow w-fit mx-auto md:px-10 px-5 md:py-5 py-2">
           HIS RECENT PROJECTS
         </h2>
 

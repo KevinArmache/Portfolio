@@ -104,7 +104,7 @@ export default function page() {
           );
         })}
       </p>
-      <div className="w-1/2  animation">
+      <div className="w-1/2 opacity-0 animation">
         <div className="group border-4 my-box-shadow relative border-secondary-color  lg:mt-20 mt-10 lg:w-3/4 w-fit   mx-auto  mb-5 p-10">
           <svg
             xmlns="http://www.w3.org/2000/svg"
