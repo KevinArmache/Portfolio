@@ -41,17 +41,17 @@ export default function Home() {
   };
 
   return (
-    <main className="md:bor">
+    <main>
       <div className="w-fit mx-auto ">
         <h1
           ref={textRef}
-          className={`${rodin.className} animation opacity-0 my-text-shadow  mt-14 text-center text-6xl drop-shadow-2xl`}
+          className={`${rodin.className} animation opacity-0 my-text-shadow  mt-14 text-center md:text-6xl text-4xl drop-shadow-2xl`}
         >
           Welcome
         </h1>
         <div className="text-center ">
           <h3
-            className={` ${rodin.className} animation  opacity-0 text-right my-text-shadow text-3xl `}
+            className={` ${rodin.className} animation  opacity-0 text-right my-text-shadow md:text-3xl text-md `}
           >
             Dear{" "}
             <span className="bg-secondary-color p-1 font-bold text-primary-color">
@@ -61,13 +61,13 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mt-10 mx-auto lg:w-1/2 md:w-2/3 w-[80%] my-box-shadow animation opacity-0">
+      <div className="mt-10 mx-auto lg:w-1/2 md:w-2/3 w-[90%] my-box-shadow animation opacity-0">
         <div className="bg-secondary-color flex items-center  p-1  mx-auto">
           <span className="bg-last-color mx-2  h-5 w-5"></span>
           <span className="text-primary-color font-bold">SYSTEM</span>
         </div>
         <div className="bg-last-color  text-center p-10  font-bold border border-secondary-color">
-          <p className="leading-loose text-xl">
+          <p className="leading-loose md:text-xl text-sm">
             Hi human, this site is the presentation of the portfolio of the
             human who is represented in the name of Kevin Armache, who is the
             author of the creation of this website in the following sections we
@@ -75,7 +75,7 @@ export default function Home() {
             is called web development which is an area related to the creation
             of websites and web applications through programming languages.
           </p>
-          <p className="leading-loose text-xl">
+          <p className="leading-loose md:text-xl text-sm">
             you will also see finished projects that Kevin has already had to
             realize for the moment I let you discover the portfolio, good visit
             dear human.
@@ -87,10 +87,8 @@ export default function Home() {
         <Link href="/home" className="inline-block" onClick={ChangePage}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="80"
-            height="80"
             viewBox="0 0 24 24"
-            className="mx-auto "
+            className="mx-auto md:w-20 w-10"
           >
             <g
               fill="none"
@@ -107,7 +105,7 @@ export default function Home() {
           </svg>
         </Link>
         <div className="h-px bg-black w-full mt-5 mb-5"></div>
-        <p className="font-bold text-xl ">
+        <p className="font-bold md:text-xl text-sm ">
           This website was inspired by the game Nier Automata
         </p>
       </div>

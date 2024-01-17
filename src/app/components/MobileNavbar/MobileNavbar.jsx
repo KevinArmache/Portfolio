@@ -25,7 +25,11 @@ export default function MobileNavbar() {
     <div className="navbar  bg-primary-color md:hidden sm:flex">
       <div className="navbar-start">
         <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+          <div
+            tabIndex={0}
+            role="button"
+            className="btn nav-bar-item btn-ghost btn-circle"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -88,7 +92,12 @@ export default function MobileNavbar() {
         </div>
       </div>
       <div className="navbar-center">
-        <a className="btn btn-ghost text-xl text-secondary-color ">ケビン</a>
+        <Link
+          href={"/home"}
+          className="btn btn-ghost nav-bar-item text-xl text-secondary-color "
+        >
+          ケビン
+        </Link>
       </div>
       <div className="navbar-end">
         <div>
