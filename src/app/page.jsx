@@ -42,7 +42,7 @@ export default function Home() {
 
   return (
     <main className="md:bor">
-      <div className="w-fit mx-auto md:border-2 md:border-red-500 sm:border-2">
+      <div className="w-fit mx-auto ">
         <h1
           ref={textRef}
           className={`${rodin.className} animation opacity-0 my-text-shadow  mt-14 text-center text-6xl drop-shadow-2xl`}

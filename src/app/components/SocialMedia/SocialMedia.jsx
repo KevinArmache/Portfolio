@@ -23,7 +23,7 @@ export default function SocialMedia() {
   }, []);
   return (
     <div
-      className={`py-5 absolute container-social-media z-50 ${
+      className={`py-5 absolute container-social-media z-50 md:block hidden ${
         pathname === "/contact" ? "invisible" : ""
       }`}
     >
