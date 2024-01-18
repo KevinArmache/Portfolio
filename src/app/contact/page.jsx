@@ -38,7 +38,7 @@ export default function page() {
 
   return (
     <div className="h-screen relative flex flex-col justify-center items-center">
-      <div className=" border-4 border-secondary-color p-32 w-fit mx-auto flex flex-col justify-center items-center">
+      <div className=" border-4 border-secondary-color md:p-32 p-20 w-fit mx-auto flex flex-col justify-center items-center">
         <Link
           target="_blank"
           className="social-media-item-on-contact-page animation opacity-0"
@@ -282,7 +282,7 @@ export default function page() {
           </Link>
         </div>
       </div>
-      <p className="text-xl animation opacity-0 w-1/2 mt-10 text-center text-secondary-color mx-auto">
+      <p className="md:text-xl $ text-sm animation opacity-0 md:w-1/2 w-[90%]  mt-10 text-center text-secondary-color mx-auto ">
         {text.split("").map((word, index) => {
           return (
             <span className="char " key={index}>
@@ -291,18 +291,20 @@ export default function page() {
           );
         })}
       </p>
-      <Image
-        className="absolute bottom-0 opacity-0 left-0 ml-10 animation"
-        src="/assets/nier-image.png"
-        width={200}
-        height={200}
-      />{" "}
-      <Image
-        className="absolute bottom-0 opacity-0 right-0 mr-10 transform scale-x-[-1] animation"
-        src="/assets/nier-image.png"
-        width={200}
-        height={200}
-      />
+      <div className=" flex items-end justify-between w-full">
+        <Image
+          className="md:w-60 w-20  opacity-0 left-0 md:ml-10 ml-2 animation"
+          src="/assets/nier-image.png"
+          width={200}
+          height={200}
+        />{" "}
+        <Image
+          className="md:w-60 w-20  opacity-0 right-0 md:mr-10 mr-2 transform scale-x-[-1] animation"
+          src="/assets/nier-image.png"
+          width={200}
+          height={200}
+        />
+      </div>
     </div>
   );
 }
