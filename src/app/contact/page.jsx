@@ -38,7 +38,7 @@ export default function page() {
 
   return (
     <div className="h-screen relative flex flex-col justify-center items-center">
-      <div className=" border-4 border-secondary-color md:p-32 p-20 w-fit mx-auto flex flex-col justify-center items-center">
+      <div className="border-4 border-secondary-color md:p-32 p-10 w-fit mx-auto flex flex-col justify-center items-center">
         <Link
           target="_blank"
           className="social-media-item-on-contact-page animation opacity-0"
@@ -291,15 +291,15 @@ export default function page() {
           );
         })}
       </p>
-      <div className=" flex items-end justify-between w-full">
+      <div className="absolute bottom-0 flex items-end justify-between w-full">
         <Image
-          className="md:w-60 w-20  opacity-0 left-0 md:ml-10 ml-2 animation"
+          className="md:w-40 w-20  opacity-0 left-0 md:ml-10 ml-2 animation"
           src="/assets/nier-image.png"
           width={200}
           height={200}
         />{" "}
         <Image
-          className="md:w-60 w-20  opacity-0 right-0 md:mr-10 mr-2 transform scale-x-[-1] animation"
+          className="md:w-40 w-20  opacity-0 right-0 md:mr-10 mr-2 transform scale-x-[-1] animation"
           src="/assets/nier-image.png"
           width={200}
           height={200}
