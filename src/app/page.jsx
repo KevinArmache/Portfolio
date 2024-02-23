@@ -41,13 +41,13 @@ export default function Home() {
     <main>
       <div className="w-fit mx-auto box-container">
         <h1
-          className={`animation opacity-0 my-text-shadow  mt-14 text-center md:text-6xl text-4xl drop-shadow-2xl`}
+          className={`animation font-bold opacity-0 my-text-shadow  mt-14 text-center md:text-6xl text-4xl drop-shadow-2xl`}
         >
           Welcome
         </h1>
         <div className="text-center ">
           <h3
-            className={` animation  opacity-0 text-right my-text-shadow md:text-3xl text-md `}
+            className={`animation font-bold opacity-0 text-right my-text-shadow md:text-3xl text-md `}
           >
             Dear{" "}
             <span className="bg-secondary-color p-1 font-bold text-primary-color">
