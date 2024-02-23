@@ -1,10 +1,15 @@
 "use client";
 import CardProject from "../components/CardProject/CardProject";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import data from "../utils/json/data.json";
 
+gsap.registerPlugin(ScrollTrigger);
+
 export default function page() {
+  const triggerRef = useRef(null);
+  const sectionRef = useRef(null);
   const text = `"Everything that lives is designed to end. They are perpetually trapped in a never-ending spiral of life and death. Is this a curse ? Or some kind of punishment ?"`;
   useEffect(() => {
     gsap.fromTo(
@@ -21,6 +26,30 @@ export default function page() {
         delay: 1,
       }
     );
+
+    const pin = gsap.fromTo(
+      sectionRef.current,
+      {
+        translateX: 0,
+      },
+      {
+        translateX: "-400vw",
+        ease: "none",
+        duration: 1,
+        scrollTrigger: {
+          // markers: true,
+          trigger: triggerRef.current,
+          start: "top top",
+          end: "1000 top",
+          scrub: true,
+          pin: true,
+        },
+      }
+    );
+
+    return () => {
+      pin.kill();
+    };
   }, []);
 
   return (
@@ -31,12 +60,18 @@ export default function page() {
         </h2>
       </div>
       {/* PROJECTS */}
-      <div className="mt-10 flex animation justify-center h-fit  flex-wrap mx-auto items-center w-3/4">
-        {data.map((project) => (
-          <CardProject className="" key={project.id} {...project} />
-        ))}
+      <div ref={triggerRef} className=" overflow-hidden">
+        <div
+          ref={sectionRef}
+          className="animation flex items-center w-[500vw] h-screen "
+        >
+          {data.map((project) => (
+            <CardProject key={project.id} {...project} />
+          ))}
+        </div>
       </div>
-      <p className="md:absolute block animation md:top-1/2 md:left-0 md:transform md:-ml-64  md:w-[40%] w-[80%] md:-translate-y-1/2 md:-rotate-90 text-center md:text-2xl text-sm mx-auto md:p-0 p-5">
+
+      {/* <p className="md:absolute block animation md:top-1/2 md:left-0 md:transform md:-ml-64  md:w-[40%] w-[80%] md:-translate-y-1/2 md:-rotate-90 text-center md:text-2xl text-sm mx-auto md:p-0 p-5">
         {text.split("").map((word, index) => {
           return (
             <span className="char opacity-0" key={index}>
@@ -44,7 +79,54 @@ export default function page() {
             </span>
           );
         })}
-      </p>
+      </p> */}
     </div>
   );
 }
+
+// export default function Home() {
+//   const trigger = useRef(null);
+//   const section = useRef(null);
+
+//   useEffect(() => {
+//     const pin = gsap.fromTo(
+//       section.current,
+//       {
+//         translateX: 0,
+//       },
+//       {
+//         translateX: "-300vw",
+//         ease: "none",
+//         duration: 1,
+//         scrollTrigger: {
+//           markers: true,
+//           trigger: trigger.current,
+//           start: "top top",
+//           end: "1000 top",
+//           scrub: true,
+//           pin: true,
+//         },
+//       }
+//     );
+
+//     return () => {
+//       pin.kill();
+//     };
+//   }, []);
+
+//   return (
+//     <main>
+//       <div ref={trigger} className="h-screen">
+//         <div
+//           ref={section}
+//           className="relative flex w-[300vw] h-screen border-2"
+//         >
+//           <div className="section section1 bg-contain bg-center   bg-[url('/assets/1.jpg')]  h-screen  w-screen"></div>
+//           <div className="section section2 bg-contain bg-[url('/assets/2.jpg')]  h-screen  w-screen"></div>
+//           <div className="section section3 bg-contain bg-[url('/assets/3.jpg')]  h-screen  w-screen"></div>
+//         </div>
+//       </div>
+//       <div className="section section3 bg-contain bg-[url('/assets/3.jpg')]  h-screen  w-screen"></div>
+//     </main>
+//   );
+// }

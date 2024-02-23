@@ -1,17 +1,18 @@
 "use client";
 import localFont from "next/font/local";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
-
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 const rodin = localFont({
   src: "./utils/fonts/Rodin-Font/FOT-RodinPro-Bold.otf",
 });
 
+gsap.registerPlugin(ScrollTrigger);
+
 export default function Home() {
   const router = useRouter();
-  const textRef = useRef(null);
 
   useEffect(() => {
     gsap.fromTo(
@@ -42,9 +43,8 @@ export default function Home() {
 
   return (
     <main>
-      <div className="w-fit mx-auto ">
+      <div className="w-fit mx-auto box-container">
         <h1
-          ref={textRef}
           className={`${rodin.className} animation opacity-0 my-text-shadow  mt-14 text-center md:text-6xl text-4xl drop-shadow-2xl`}
         >
           Welcome
