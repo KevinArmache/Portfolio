@@ -1,6 +1,6 @@
 "use client";
 import CardProject from "../components/CardProject/CardProject";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import data from "../utils/json/data.json";
@@ -8,15 +8,11 @@ import data from "../utils/json/data.json";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function page() {
-  const [width, setWidth] = useState("");
   const triggerRef = useRef(null);
   const sectionRef = useRef(null);
-  console.log(width);
+
   const text = `"Everything that lives is designed to end. They are perpetually trapped in a never-ending spiral of life and death. Is this a curse ? Or some kind of punishment ?"`;
   useEffect(() => {
-    const calculWidth = 100 * data.length;
-    setWidth(calculWidth);
-
     gsap.fromTo(
       ".char",
       {
