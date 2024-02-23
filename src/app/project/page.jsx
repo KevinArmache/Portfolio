@@ -68,7 +68,7 @@ export default function page() {
       <div ref={triggerRef} className=" overflow-hidden">
         <div
           ref={sectionRef}
-          className={`animation flex items-center w-[${width.toString()}vw] h-screen`}
+          className={`animation flex items-center w-[500vw] h-screen`}
         >
           {data.map((project) => (
             <CardProject key={project.id} {...project} />
