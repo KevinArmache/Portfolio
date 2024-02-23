@@ -6,14 +6,14 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import data from "../utils/json/data.json";
 
 gsap.registerPlugin(ScrollTrigger);
-
+console.log(data.length);
 export default function page() {
   const triggerRef = useRef(null);
   const sectionRef = useRef(null);
   const text = `"Everything that lives is designed to end. They are perpetually trapped in a never-ending spiral of life and death. Is this a curse ? Or some kind of punishment ?"`;
   useEffect(() => {
     gsap.fromTo(
-      ".char, .animation ",
+      ".char",
       {
         y: 50,
         opacity: 0,
@@ -73,15 +73,14 @@ export default function page() {
         </div>
       </div>
 
-      <p className="md:absolute block  opacity-0 animation md:top-1/2 md:left-0 md:transform md:-ml-64  md:w-[40%] w-[80%] md:-translate-y-1/2 md:-rotate-90 text-center md:text-2xl text-sm mx-auto md:p-0 p-5">
-        {/* {text.split("").map((word, index) => {
+      <p className="md:absolute block animation md:top-1/2 md:left-0 md:transform md:-ml-64  md:w-[40%] w-[80%] md:-translate-y-1/2 md:-rotate-90 text-center md:text-2xl text-sm mx-auto md:p-0 p-5">
+        {text.split("").map((word, index) => {
           return (
             <span className="char opacity-0" key={index}>
               {word}
             </span>
           );
-        })} */}
-        {text}
+        })}
       </p>
     </div>
   );
