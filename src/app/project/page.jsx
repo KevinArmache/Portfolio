@@ -1,18 +1,22 @@
 "use client";
 import CardProject from "../components/CardProject/CardProject";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import data from "../utils/json/data.json";
 
 gsap.registerPlugin(ScrollTrigger);
+
 export default function page() {
+  const [width, setWidth] = useState("");
   const triggerRef = useRef(null);
   const sectionRef = useRef(null);
-  const width = 100 * data.length;
-
+  console.log(width);
   const text = `"Everything that lives is designed to end. They are perpetually trapped in a never-ending spiral of life and death. Is this a curse ? Or some kind of punishment ?"`;
   useEffect(() => {
+    const calculWidth = 100 * data.length;
+    setWidth(calculWidth);
+
     gsap.fromTo(
       ".char",
       {
@@ -64,7 +68,7 @@ export default function page() {
       <div ref={triggerRef} className=" overflow-hidden">
         <div
           ref={sectionRef}
-          className={`animation border-2 flex items-center w-[${width}vw] h-screen`}
+          className={`animation flex items-center w-[${width.toString()}vw] h-screen`}
         >
           {data.map((project) => (
             <CardProject key={project.id} {...project} />
