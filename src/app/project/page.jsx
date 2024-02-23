@@ -40,7 +40,7 @@ export default function page() {
           // markers: true,
           trigger: triggerRef.current,
           start: "top top",
-          end: "1000 top",
+          end: "2000 top",
           scrub: true,
           pin: true,
         },
@@ -71,7 +71,7 @@ export default function page() {
         </div>
       </div>
 
-      {/* <p className="md:absolute block animation md:top-1/2 md:left-0 md:transform md:-ml-64  md:w-[40%] w-[80%] md:-translate-y-1/2 md:-rotate-90 text-center md:text-2xl text-sm mx-auto md:p-0 p-5">
+      <p className="md:absolute block animation md:top-1/2 md:left-0 md:transform md:-ml-64  md:w-[40%] w-[80%] md:-translate-y-1/2 md:-rotate-90 text-center md:text-2xl text-sm mx-auto md:p-0 p-5">
         {text.split("").map((word, index) => {
           return (
             <span className="char opacity-0" key={index}>
@@ -79,7 +79,7 @@ export default function page() {
             </span>
           );
         })}
-      </p> */}
+      </p>
     </div>
   );
 }
