@@ -1,11 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@font-face {
-  font-family: rodin;
-  src: url("./utils/fonts/Rodin-Font/FOT-Rodin\ Pro\ Medium.ttf");
-  weight: 400;
-}
 
 :root {
   --primary-color: #cdc8b0;
@@ -44,7 +39,6 @@ h4,
 h5,
 h6 {
   color: #4a473d;
-  font-family: rodin;
 }
 
 .container-social-media {
