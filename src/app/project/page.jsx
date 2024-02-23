@@ -6,10 +6,11 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import data from "../utils/json/data.json";
 
 gsap.registerPlugin(ScrollTrigger);
-console.log(data.length);
 export default function page() {
   const triggerRef = useRef(null);
   const sectionRef = useRef(null);
+  const width = 100 * data.length;
+
   const text = `"Everything that lives is designed to end. They are perpetually trapped in a never-ending spiral of life and death. Is this a curse ? Or some kind of punishment ?"`;
   useEffect(() => {
     gsap.fromTo(
@@ -63,9 +64,7 @@ export default function page() {
       <div ref={triggerRef} className=" overflow-hidden">
         <div
           ref={sectionRef}
-          className={`animation flex items-center w-[${
-            100 * data.length
-          }vw] h-screen`}
+          className={`animation border-2 flex items-center w-[${width}vw] h-screen`}
         >
           {data.map((project) => (
             <CardProject key={project.id} {...project} />
