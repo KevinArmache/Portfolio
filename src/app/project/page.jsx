@@ -13,7 +13,7 @@ export default function page() {
   const text = `"Everything that lives is designed to end. They are perpetually trapped in a never-ending spiral of life and death. Is this a curse ? Or some kind of punishment ?"`;
   useEffect(() => {
     gsap.fromTo(
-      ".char",
+      ".char, .animation ",
       {
         y: 50,
         opacity: 0,
@@ -33,7 +33,7 @@ export default function page() {
         translateX: 0,
       },
       {
-        translateX: "-400vw",
+        translateX: `-${100 * data.length - 100}vw`,
         ease: "none",
         duration: 1,
         scrollTrigger: {
@@ -63,7 +63,9 @@ export default function page() {
       <div ref={triggerRef} className=" overflow-hidden">
         <div
           ref={sectionRef}
-          className="animation flex items-center w-[500vw] h-screen "
+          className={`animation flex items-center w-[${
+            100 * data.length
+          }vw] h-screen`}
         >
           {data.map((project) => (
             <CardProject key={project.id} {...project} />
@@ -71,14 +73,15 @@ export default function page() {
         </div>
       </div>
 
-      <p className="md:absolute block animation md:top-1/2 md:left-0 md:transform md:-ml-64  md:w-[40%] w-[80%] md:-translate-y-1/2 md:-rotate-90 text-center md:text-2xl text-sm mx-auto md:p-0 p-5">
-        {text.split("").map((word, index) => {
+      <p className="md:absolute block  opacity-0 animation md:top-1/2 md:left-0 md:transform md:-ml-64  md:w-[40%] w-[80%] md:-translate-y-1/2 md:-rotate-90 text-center md:text-2xl text-sm mx-auto md:p-0 p-5">
+        {/* {text.split("").map((word, index) => {
           return (
             <span className="char opacity-0" key={index}>
               {word}
             </span>
           );
-        })}
+        })} */}
+        {text}
       </p>
     </div>
   );
