@@ -2,26 +2,31 @@
   {
     "id": 1,
     "name": "Manzibar",
-    "link": "https://manzibar.fr"
+    "link": "https://manzibar.fr",
+    "description": "Site web moderne pour Manzibar, une plateforme e-commerce élégante avec une interface utilisateur intuitive et des fonctionnalités avancées de gestion de produits."
   },
   {
     "id": 2,
     "name": "Asf Luthier",
-    "link": "https://asf-luthier.com"
+    "link": "https://asf-luthier.com",
+    "description": "Portfolio professionnel pour un luthier, présentant ses créations artisanales de guitares et instruments à cordes avec une galerie visuelle immersive."
   },
   {
     "id": 3,
     "name": "Tapotap",
-    "link": "https://tapotap.vercel.app"
+    "link": "https://tapotap.vercel.app",
+    "description": "Application web interactive Tapotap offrant une expérience utilisateur unique avec des animations fluides et une interface moderne et responsive."
   },
   {
     "id": 4,
     "name": "MfsCongo",
-    "link": "https://mfscongo.com"
+    "link": "https://mfscongo.com",
+    "description": "Site institutionnel pour MfsCongo, présentant les services et activités de l'organisation avec un design professionnel et une navigation claire."
   },
   {
     "id": 5,
     "name": "Dk Digital",
-    "link": "https://dkdigital.netlify.app"
+    "link": "https://dkdigital.netlify.app",
+    "description": "Plateforme digitale Dk Digital offrant des solutions web innovantes avec une présentation moderne de services et une expérience utilisateur optimisée."
   }
 ]
