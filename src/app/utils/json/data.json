@@ -1,32 +1,26 @@
 [
   {
     "id": 1,
-    "name": "Manzibar",
-    "link": "https://manzibar.fr",
-    "description": "Site web moderne pour Manzibar, une plateforme e-commerce élégante avec une interface utilisateur intuitive et des fonctionnalités avancées de gestion de produits."
+    "name": "Plinko Game",
+    "link": "https://newkore-digital.vercel.app/games/plinko/demo",
+    "description": "NewKore Digital propose une démo interactive du jeu Plinko, un classique de hasard revisité. Les joueurs lâchent une bille du haut d’un tableau de plots, et regardent sa trajectoire aléatoire jusqu’aux slots du bas. Cette version web permet d’expérimenter sans risque, tout en testant des stratégies, grâce à une interface fluide, des graphismes modernes et un gameplay engageant."
   },
   {
     "id": 2,
     "name": "Asf Luthier",
     "link": "https://asf-luthier.com",
-    "description": "Portfolio professionnel pour un luthier, présentant ses créations artisanales de guitares et instruments à cordes avec une galerie visuelle immersive."
+    "description": "ASF-Luthier.fr est le site vitrine fait en nextjs d’un atelier de lutherie artisanale, spécialisé dans la fabrication, la restauration et le réglage d’instruments à cordes. Il met en avant le savoir-faire artisanal, l’exigence de qualité et la passion du bois. Cet atelier combine tradition de la lutherie et précision moderne pour créer des instruments uniques et durables."
   },
   {
     "id": 3,
     "name": "Tapotap",
     "link": "https://tapotap.vercel.app",
-    "description": "Application web interactive Tapotap offrant une expérience utilisateur unique avec des animations fluides et une interface moderne et responsive."
+    "description": "Tapotap est un jeu web multijoueur en temps réel où les joueurs s’affrontent dans des défis de vitesse et de précision. Grâce à Socket.IO, l’expérience est fluide et dynamique, avec des salons, un système de compte à rebours, une détection anti-bot et un suivi instantané des scores. Conçu en Next.js, Tapotap offre une interface moderne, rapide et totalement responsive."
   },
   {
     "id": 4,
-    "name": "MfsCongo",
-    "link": "https://mfscongo.com",
-    "description": "Site institutionnel pour MfsCongo, présentant les services et activités de l'organisation avec un design professionnel et une navigation claire."
-  },
-  {
-    "id": 5,
-    "name": "Dk Digital",
-    "link": "https://dkdigital.netlify.app",
-    "description": "Plateforme digitale Dk Digital offrant des solutions web innovantes avec une présentation moderne de services et une expérience utilisateur optimisée."
+    "name": "Hoot",
+    "link": "https://hoot-develop.vercel.app/1",
+    "description": "Hoot-Develop est un menu digital interactif pensé pour les restaurants. Les clients peuvent scanner un QR code et accéder instantanément à une carte numérique : plats, catégories et prix sont affichés de façon claire et moderne. L’interface est fluide, responsive et optimisée pour tous les appareils. Cette solution web élimine les menus papier, simplifie les mises à jour et offre une expérience client plus propre et écologique."
   }
 ]
